@@ -1,5 +1,6 @@
-from django.http.response import HttpResponse, FileResponse
+from django.http.response import HttpResponse, FileResponse,JsonResponse
 import os
+from django.shortcuts import render
 
 
 def product_hello_page(request):
@@ -18,6 +19,20 @@ def download_Dorcci(request):
         as_attachment=True
     )
     
+
+def your_info(request):
+    your_info = {
+        "name":"amirhosein",
+        "age":21,
+        "code":"021"
+    }
+    return JsonResponse(your_info)
+
+
+
+ 
+
+
 
 
 
